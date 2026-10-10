@@ -1,0 +1,20 @@
+{
+  "library": [
+    { "id": 1, "title": "Yoqtirgan treklar", "subtitle": "Pleylist • 38 ta trek", "type": "playlist", "cover": "https://picsum.photos/seed/liked/100" },
+    { "id": 2, "title": "Vxlious", "subtitle": "Ijrochi", "type": "artist", "cover": "https://picsum.photos/seed/vx/100" },
+    { "id": 3, "title": "Tungi chat", "subtitle": "Ijrochi", "type": "artist", "cover": "https://picsum.photos/seed/benom/100" },
+    { "id": 4, "title": "Mening mixim #1", "subtitle": "Pleylist • Behruz", "type": "playlist", "cover": "https://picsum.photos/seed/mix1/100" },
+    { "id": 5, "title": "Miyagi & Andy Panda", "subtitle": "Ijrochi", "type": "artist", "cover": "https://picsum.photos/seed/miyagi/100" },
+    { "id": 6, "title": "Tungi", "subtitle": "Pleylist • Behruz", "type": "playlist", "cover": "https://picsum.photos/seed/night/100" }
+  ],
+   "songs": [
+    { "id": 1, "title": "Tungi yo'l", "artist": "Benom guruhi", "section": "mix", "cover": "https://picsum.photos/seed/s1/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
+    { "id": 2, "title": "Yulduzlar", "artist": "Ozodbek", "section": "mix", "cover": "https://picsum.photos/seed/s2/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
+    { "id": 3, "title": "Shahar chiroqlari", "artist": "Miyagi", "section": "mix", "cover": "https://picsum.photos/seed/s3/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
+    { "id": 4, "title": "Yomg'ir", "artist": "Vxlious", "section": "mix", "cover": "https://picsum.photos/seed/s4/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
+    { "id": 5, "title": "Orzu", "artist": "Munisa", "section": "recent", "cover": "https://picsum.photos/seed/s5/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
+    { "id": 6, "title": "Tong", "artist": "Andy Panda", "section": "recent", "cover": "https://picsum.photos/seed/s6/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
+    { "id": 7, "title": "Sokin kecha", "artist": "Benom guruhi", "section": "recent", "cover": "https://picsum.photos/seed/s7/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
+    { "id": 8, "title": "Yo'lovchi", "artist": "Xcho", "section": "recent", "cover": "https://picsum.photos/seed/s8/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
+  ]
+}
