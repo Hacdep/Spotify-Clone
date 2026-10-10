@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SongCard from "../components/SongCard";
+import { usePlayer } from "../store/usePlayer";
 
 function Section({ title, songs, onPlay }) {
   return (
@@ -15,6 +16,7 @@ function Section({ title, songs, onPlay }) {
 }
 
 export default function Home() {
+  const { play, setQueue } = usePlayer();
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -25,12 +27,13 @@ export default function Home() {
         if (!res.ok) throw new Error("Server xatosi");
         return res.json();
       })
-      .then(setSongs)
+      .then((data) => {
+        setSongs(data);
+        setQueue(data);
+      })
       .catch(() => setError(true))
       .finally(() => setLoading(false));
   }, []);
-
-  const handlePlay = (song) => console.log("Ijro:", song.title);
 
   if (loading) return <p className="text-neutral-400">Yuklanmoqda...</p>;
   if (error)
@@ -41,12 +44,12 @@ export default function Home() {
       <Section
         title="Kun mixlari"
         songs={songs.filter((s) => s.section === "mix")}
-        onPlay={handlePlay}
+        onPlay={play}
       />
       <Section
         title="So'nggi"
         songs={songs.filter((s) => s.section === "recent")}
-        onPlay={handlePlay}
+        onPlay={play}
       />
     </>
   );

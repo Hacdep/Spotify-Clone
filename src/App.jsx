@@ -1,5 +1,7 @@
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
+import Player from "./components/Player";
+import NowPlaying from "./components/NowPlaying";
 
 export default function App() {
   return (
@@ -13,7 +15,9 @@ export default function App() {
       <main className="bg-neutral-900 rounded-lg p-6 overflow-y-auto">
         <Home />
       </main>
+    <NowPlaying />
 
+    <Player   />
       <aside className="bg-neutral-900 rounded-lg p-3">Hozirgi qo'shiq</aside>
 
       <footer className="col-span-3 bg-neutral-900 rounded-lg p-3">
