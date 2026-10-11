@@ -8,13 +8,203 @@
     { "id": 6, "title": "Tungi", "subtitle": "Pleylist • Behruz", "type": "playlist", "cover": "https://picsum.photos/seed/night/100" }
   ],
    "songs": [
-    { "id": 1, "title": "Tungi yo'l", "artist": "Benom guruhi", "section": "mix", "cover": "https://picsum.photos/seed/s1/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" },
-    { "id": 2, "title": "Yulduzlar", "artist": "Ozodbek", "section": "mix", "cover": "https://picsum.photos/seed/s2/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" },
-    { "id": 3, "title": "Shahar chiroqlari", "artist": "Miyagi", "section": "mix", "cover": "https://picsum.photos/seed/s3/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" },
-    { "id": 4, "title": "Yomg'ir", "artist": "Vxlious", "section": "mix", "cover": "https://picsum.photos/seed/s4/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" },
-    { "id": 5, "title": "Orzu", "artist": "Munisa", "section": "recent", "cover": "https://picsum.photos/seed/s5/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" },
-    { "id": 6, "title": "Tong", "artist": "Andy Panda", "section": "recent", "cover": "https://picsum.photos/seed/s6/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" },
-    { "id": 7, "title": "Sokin kecha", "artist": "Benom guruhi", "section": "recent", "cover": "https://picsum.photos/seed/s7/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" },
-    { "id": 8, "title": "Yo'lovchi", "artist": "Xcho", "section": "recent", "cover": "https://picsum.photos/seed/s8/300", "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" }
+    {
+      "id": 1,
+      "title": "Why Oh You Are L O V E",
+      "artist": "Dancefloor is Lava",
+      "section": "mix",
+      "cover": "/covers/love.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Dancefloor_is_Lava_-_01_-_Why_Oh_You_Are_L_O_V_E.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Dancefloor_is_Lava_-_01_-_Why_Oh_You_Are_L_O_V_E.ogg"
+    },
+    {
+      "id": 2,
+      "title": "Exquisite Music",
+      "artist": "Greg Walker",
+      "section": "mix",
+      "cover": "/covers/exquisite.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Exquisite_Music_by_Greg_Walker.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Exquisite_Music_by_Greg_Walker.ogg"
+    },
+    {
+      "id": 3,
+      "title": "Kanun music and singing during the 5th anniversary of Wikimedia Armenia",
+      "artist": "Benoît Prieur",
+      "section": "mix",
+      "cover": "/covers/kanun.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Kanun_music_and_singing_during_the_5th_anniversary_of_Wikimedia_Armenia.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Kanun_music_and_singing_during_the_5th_anniversary_of_Wikimedia_Armenia.ogg"
+    },
+    {
+      "id": 4,
+      "title": "Alien Spaceship Atmosphere",
+      "artist": "Kevin MacLeod",
+      "section": "mix",
+      "cover": "/covers/alien.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Kevin_MacLeod_-_Alien_Spaceship_Atmosphere_%28cc0%29.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Kevin_MacLeod_-_Alien_Spaceship_Atmosphere_(cc0).ogg"
+    },
+    {
+      "id": 5,
+      "title": "Merfolk Music Box",
+      "artist": "Komiku",
+      "section": "recent",
+      "cover": "/covers/merfolk.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Komiku_-_46_-_Merfolk_Music_Box.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Komiku_-_46_-_Merfolk_Music_Box.ogg"
+    },
+    {
+      "id": 6,
+      "title": "Coexistenz",
+      "artist": "Loyalty Freak Music",
+      "section": "recent",
+      "cover": "/covers/coexistenz.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Loyalty_Freak_Music_-_01_-_Coexistenz.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Loyalty_Freak_Music_-_01_-_Coexistenz.ogg"
+    },
+    {
+      "id": 7,
+      "title": "Everyone Is So Alive",
+      "artist": "Loyalty Freak Music",
+      "section": "recent",
+      "cover": "/covers/alive.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Loyalty_Freak_Music_-_01_-_Everyone_is_so_alive.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Loyalty_Freak_Music_-_01_-_Everyone_is_so_alive.ogg"
+    },
+    {
+      "id": 8,
+      "title": "Go to the Picnic",
+      "artist": "Loyalty Freak Music",
+      "section": "recent",
+      "cover": "/covers/picnic.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.ogg"
+    },
+    {
+      "id": 9,
+      "title": "Folk Song from the Carpathians",
+      "artist": "Traditional",
+      "section": "folk",
+      "cover": "/covers/folk.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Traditional_music_of_the_Carpathians_-_01_-_Folk_dance.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Traditional_music_of_the_Carpathians_-_01_-_Folk_dance.ogg"
+    },
+    {
+      "id": 10,
+      "title": "Midnight Jazz Lounge",
+      "artist": "The Jazz Ensemble",
+      "section": "jazz",
+      "cover": "/covers/jazz.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Midnight_Jazz_Lounge_-_01_-_Blue_Notes.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Midnight_Jazz_Lounge_-_01_-_Blue_Notes.ogg"
+    },
+    {
+      "id": 11,
+      "title": "Neon Pulse",
+      "artist": "Synthwave Drive",
+      "section": "electronic",
+      "cover": "/covers/electronic.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Neon_Pulse_-_01_-_Synthwave_Drive.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Neon_Pulse_-_01_-_Synthwave_Drive.ogg"
+    },
+    {
+      "id": 12,
+      "title": "Moonlight Sonata (Excerpt)",
+      "artist": "Ludwig van Beethoven",
+      "section": "classical",
+      "cover": "/covers/classical.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Moonlight_Sonata_-_01_-_Adagio_sostenuto.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Moonlight_Sonata_-_01_-_Adagio_sostenuto.ogg"
+    },
+    {
+      "id": 13,
+      "title": "Ocean Drift",
+      "artist": "Ambient Fields",
+      "section": "ambient",
+      "cover": "/covers/ambient.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Ocean_Drift_-_01_-_Ambient_Fields.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Ocean_Drift_-_01_-_Ambient_Fields.ogg"
+    },
+    {
+      "id": 14,
+      "title": "Thunder Road (Live)",
+      "artist": "The Highwaymen",
+      "section": "rock",
+      "cover": "/covers/rock.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Thunder_Road_-_01_-_The_Highwaymen.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Thunder_Road_-_01_-_The_Highwaymen.ogg"
+    },
+    {
+      "id": 15,
+      "title": "Desert Mirage",
+      "artist": "Nomad Collective",
+      "section": "world",
+      "cover": "/covers/folk.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Desert_Mirage_-_01_-_Nomad_Collective.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Desert_Mirage_-_01_-_Nomad_Collective.ogg"
+    },
+    {
+      "id": 16,
+      "title": "Neon City Streets",
+      "artist": "Retro Drive",
+      "section": "electronic",
+      "cover": "/covers/electronic.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Neon_City_Streets_-_01_-_Retro_Drive.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Neon_City_Streets_-_01_-_Retro_Drive.ogg"
+    },
+    {
+      "id": 17,
+      "title": "Autumn Leaves",
+      "artist": "The Quartet",
+      "section": "jazz",
+      "cover": "/covers/jazz.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Autumn_Leaves_-_01_-_The_Quartet.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Autumn_Leaves_-_01_-_The_Quartet.ogg"
+    },
+    {
+      "id": 18,
+      "title": "Mountain Hike",
+      "artist": "Folk Ensemble",
+      "section": "folk",
+      "cover": "/covers/folk.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Mountain_Hike_-_01_-_Folk_Ensemble.ogg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Mountain_Hike_-_01_-_Folk_Ensemble.ogg"
+    }
   ]
 }

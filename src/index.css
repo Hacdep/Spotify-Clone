@@ -1,10 +1,61 @@
-   @import "tailwindcss";
+@import "tailwindcss";
 
-   body {
-     margin: 0;
-     background: black;
-   }
-   * {
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 280px;
+  background: #000;
+  color: #fff;
+  font-family: "CircularSp", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
   scrollbar-width: thin;
   scrollbar-color: #4d4d4d transparent;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #1ed760;
+  outline-offset: 3px;
+}
+
+.spotify-carousel {
+  scrollbar-width: none;
+}
+
+.spotify-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -1,126 +1,100 @@
-import { useEffect, useState } from "react";
+import { Heart, Plus } from "lucide-react";
+import LanguagePicker from "./LanguagePicker";
 
-const filters = [
-  { key: "all", label: "Hammasi" },
-  { key: "playlist", label: "Pleylistlar" },
-  { key: "artist", label: "Ijrochilar" },
-];
-
-export default function Sidebar() {
-  const [filter, setFilter] = useState("all");
-  const [library, setLibrary] = useState([]);
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    async function loadLibrary() {
-      try {
-        const response = await fetch("http://localhost:3001/library", {
-          signal: controller.signal,
-        });
-        if (!response.ok) {
-          throw new Error(`Kutubxonani yuklab bo'lmadi (${response.status})`);
-        }
-
-        const data = await response.json();
-        if (!Array.isArray(data)) {
-          throw new Error("db.json ichidagi library ro'yxati noto'g'ri formatda");
-        }
-
-        setLibrary(data);
-      } catch (loadError) {
-        if (loadError.name !== "AbortError") {
-          setError(
-            loadError instanceof Error
-              ? loadError.message
-              : "Kutubxonani yuklashda noma'lum xatolik yuz berdi",
-          );
-        }
-      } finally {
-        if (!controller.signal.aborted) {
-          setIsLoading(false);
-        }
-      }
-    }
-
-    loadLibrary();
-    return () => controller.abort();
-  }, []);
-
-  const items =
-    filter === "all" ? library : library.filter((i) => i.type === filter);
-
+export default function Sidebar({
+  user,
+  library,
+  locale,
+  onLocaleChange,
+  onSignUp,
+  onRequestCreatePlaylist,
+  onOpenCollection,
+  t,
+}) {
   return (
-    <aside className="bg-neutral-900 rounded-lg flex flex-col overflow-hidden">
-      {/* Sarlavha */}
-      <div className="flex items-center justify-between p-4">
-        <h2 className="font-bold text-neutral-300">Mediateka</h2>
-        <button className="w-8 h-8 rounded-full bg-neutral-800 hover:bg-neutral-700 text-xl leading-none">
-          +
+    <aside className="hidden min-h-0 flex-col overflow-hidden rounded-lg bg-neutral-950 md:flex">
+      <div className="flex items-center justify-between px-5 py-4">
+        <h2 className="font-bold text-neutral-300">{t("library")}</h2>
+        <button
+          type="button"
+          aria-label={t(user ? "createPlaylistButton" : "createPlaylist")}
+          onClick={() => user ? onRequestCreatePlaylist() : onSignUp()}
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-900 text-neutral-300 transition hover:bg-neutral-800 hover:text-white"
+        >
+          <Plus size={20} />
         </button>
       </div>
 
-      {/* Filtrlar */}
-      <div className="flex gap-2 px-4 pb-3">
-        {filters.map((f) => (
+      {user ? (
+        <>
+          <div className="px-3 pb-2">
+            <ul className="max-h-52 overflow-y-auto">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onOpenCollection({ kind: "liked" })}
+                  className="flex w-full items-center gap-3 rounded-md p-2 text-left hover:bg-neutral-900"
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-gradient-to-br from-indigo-500 to-violet-900">
+                    <Heart size={22} fill="white" aria-hidden="true" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block truncate font-medium">{t("likedSongs")}</span>
+                    <span className="block truncate text-sm text-neutral-400">
+                      {t("playlistLabel")} · {library.likedSongs.length}
+                    </span>
+                  </span>
+                </button>
+              </li>
+              {library.playlists.map((playlist) => (
+                <li key={playlist.id}>
+                  <button
+                    type="button"
+                    onClick={() => onOpenCollection({ kind: "playlist", id: playlist.id })}
+                    className="flex w-full items-center gap-3 rounded-md p-2 text-left hover:bg-neutral-900"
+                  >
+                    <img
+                      src={playlist.songs[0]?.cover ?? "https://picsum.photos/seed/playlist/100"}
+                      alt=""
+                      className="h-12 w-12 shrink-0 rounded object-cover"
+                    />
+                    <span className="min-w-0">
+                      <span className="block truncate font-medium">{playlist.name}</span>
+                      <span className="block truncate text-sm text-neutral-400">
+                        {t("playlistLabel")} · {playlist.songs.length}
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <div className="mx-2 mt-2 rounded-lg bg-neutral-900 p-4">
+          <h3 className="mb-2 text-sm font-bold">{t("createPlaylist")}</h3>
+          <p className="mb-4 text-sm text-neutral-300">{t("playlistHint")}</p>
           <button
-            key={f.key}
-            onClick={() => setFilter(f.key)}
-            className={`px-3 py-1 rounded-full text-sm transition ${
-              filter === f.key
-                ? "bg-white text-black"
-                : "bg-neutral-800 hover:bg-neutral-700"
-            }`}
+            type="button"
+            onClick={onSignUp}
+            className="rounded-full bg-white px-4 py-2 text-sm font-bold text-black transition hover:scale-105"
           >
-            {f.label}
+            {t("createPlaylistButton")}
           </button>
-        ))}
-      </div>
+        </div>
+      )}
 
-      {/* Ro'yxat */}
-      <ul className="flex-1 overflow-y-auto px-2 pb-2">
-        {isLoading && (
-          <li className="p-2 text-sm text-neutral-400">Yuklanmoqda...</li>
-        )}
-        {error && (
-          <li className="p-2 text-sm text-red-400">
-            {error}. npm run server buyrug'i ishlayotganini tekshiring.
-          </li>
-        )}
-        {!isLoading &&
-          !error &&
-          items.map((item) => (
-            <li
-              key={item.id}
-              className="flex items-center gap-3 p-2 rounded-md hover:bg-neutral-800 cursor-pointer"
-            >
-              {item.cover ? (
-                <img
-                  src={item.cover}
-                  alt={item.title}
-                  className={`w-12 h-12 object-cover ${
-                    item.type === "artist" ? "rounded-full" : "rounded"
-                  }`}
-                />
-              ) : (
-                <div
-                  aria-hidden="true"
-                  className={`w-12 h-12 bg-neutral-800 ${
-                    item.type === "artist" ? "rounded-full" : "rounded"
-                  }`}
-                />
-              )}
-              <div className="min-w-0">
-                <p className="truncate font-medium">{item.title}</p>
-                <p className="truncate text-sm text-neutral-400">
-                  {item.subtitle}
-                </p>
-              </div>
-            </li>
-          ))}
-      </ul>
+      <div className="mt-auto space-y-5 px-4 pb-5 pt-6 text-[11px] text-neutral-400">
+        <div className="flex flex-wrap gap-x-3 gap-y-2">
+          <a href="https://www.spotify.com/legal/" className="hover:text-white">{t("legal")}</a>
+          <a href="https://www.spotify.com/safetyandprivacy/" className="hover:text-white">{t("safety")}</a>
+          <a href="https://www.spotify.com/legal/privacy-policy/" className="hover:text-white">{t("privacy")}</a>
+          <a href="https://www.spotify.com/legal/cookies-policy/" className="hover:text-white">{t("cookies")}</a>
+          <a href="https://www.spotify.com/legal/privacy-policy/#s3" className="hover:text-white">{t("aboutAds")}</a>
+          <a href="https://www.spotify.com/accessibility/" className="hover:text-white">{t("accessibility")}</a>
+        </div>
+        <LanguagePicker locale={locale} onLocaleChange={onLocaleChange} t={t} />
+      </div>
     </aside>
   );
 }
