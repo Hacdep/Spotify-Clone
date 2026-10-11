@@ -6,7 +6,7 @@ import SiteFooter from "./components/SiteFooter";
 import AuthPage from "./pages/AuthPage";
 import Download from "./pages/Download";
 import Home from "./pages/Home";
-import LibraryCollection from "./pages/LibraryCollection";
+import LibraryColle`ction from "./pages/LibraryCollection";
 import LibraryPage from "./pages/LibraryPage";
 import Premium from "./pages/Premium";
 import Support from "./pages/Support";

@@ -3,15 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://github.com/Hacdep/Spotify-Clone.git",
   "scripts": {
     "dev": "vite",
     "dev:full": "node dev.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "server": "node server.js"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "lucide-react": "^1.55.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
